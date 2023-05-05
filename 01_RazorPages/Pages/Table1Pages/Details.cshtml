@@ -1,0 +1,25 @@
+﻿@page
+@model _01_RazorPages.Pages.Table1Pages.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Table1</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Table1.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Table1.Name)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Table1?.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
